@@ -9,7 +9,7 @@ Scrapes http://books.toscrape.com and loads all the books in the page.
 pip install -r requirements.txt
 ```
 
-2. Create `.env` file. For example:
+2. Create `.env` file in `resources/.env`. It must have these variables:
 ```
 TEXTBOOK_WEB_BASEURL="http://books.toscrape.com"
 TEXT_GENERATOR_URL="https://api.deepai.org/api/text-generator"
