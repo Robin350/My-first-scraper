@@ -1,7 +1,7 @@
 # My-first-scraper
 My first time using a web scaper.
 
-Scrapes http://books.toscrape.com and loads all the bocks in the page.
+Scrapes http://books.toscrape.com and loads all the books in the page.
 
 ## Run in local environment
 1. Install required dependencies (venv reccomended)
