@@ -39,18 +39,19 @@ class TextbookScraper:
 
         self.soup = scraper.load_web_xml_content(f"{self._base_url}{self._current_page}")
 
-        books = soup.find_all("article", class_="product_pod")
+        books = self.soup.find_all("article", class_="product_pod")
         for book in books:
             book_data = {
                 "image_url": book.find("div", class_="image_container").a.img["src"],
                 "price": book.find("p", class_="price_color").getText()[2:],
-                "star_rating": text_numbers_to_int[book.find("p", class_="star-rating")["class"][1]],
+                "star_rating":
+                    self.TEXT_NUMBERS_TO_INT[book.find("p", class_="star-rating")["class"][1]],
                 "title": book.find("h3").a.getText(),
             }
 
             self.books.append(Textbook(**book_data))
 
-        self._next_page = soup.find("li", class_="next")
+        self._next_page = self.soup.find("li", class_="next")
 
     def load_all_books(self):
 

@@ -8,6 +8,7 @@ from resources.utils import text_generator
 
 from currency_converter import CurrencyConverter
 
+
 class Textbook:
     ID_COUNT = 1
 
