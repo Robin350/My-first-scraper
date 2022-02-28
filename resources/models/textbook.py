@@ -4,7 +4,7 @@ import os
 import logging
 
 from threading import Lock
-from resources.lib import text_generator
+from resources.utils import text_generator
 
 from currency_converter import CurrencyConverter
 

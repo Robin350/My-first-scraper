@@ -4,7 +4,7 @@ import os
 import logging
 import currencyconverter
 
-from resources.lib import scraper, translator
+from resources.utils import scraper, translator
 from resources.models.textbook import Textbook
 
 
